@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.48);
+    height: 80px;
+}
+
+.navigator{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    padding-bottom: 0.25rem; 
+    position: relative;
+    margin-left: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.25s ease-out;
+  }
+
+  .link:hover::before {
+    width: 100%;
+  }
+.userInfoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+.logoContainer{
+    width: 10%;
+}
+.favouriteContainer{
+    background-color: #ECECEC;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favouriteLink
+{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userInfoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.signInContainer{
+    background-color: #D3EAFF;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 160px;
+    font-family: 'Syne', sans-serif;
+    cursor: pointer;
+}
+
+.signInContainer:active{
+    background-color: #A1C9FF;
+}
+
+
+
+

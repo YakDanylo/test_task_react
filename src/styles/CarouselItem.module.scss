@@ -1,0 +1,39 @@
+.carousel
+{
+    width: 70%;
+    margin: 0 auto;  
+}
+
+.carouselHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+.carouselTitle{
+    font-size: 2em;
+    font-weight: bold;
+    color: #1F1F1F;
+    margin-top: 0;
+    margin-bottom: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    margin-left: 13px;
+
+}
+
+.carouselButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    padding: 5px;
+    background-color: #ECECEC;
+    margin-left: 5px;
+    cursor: pointer;
+}

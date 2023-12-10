@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Syne:wght@700&display=swap');
+.userInfoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.signInContainer{
+    background-color: #D3EAFF;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 160px;
+    font-family: 'Syne', sans-serif;
+    cursor: pointer;
+}
+
+.banner{
+    height: 740px;
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    width: 100%;
+}
+
+.title{
+    font-weight: bold;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Syne', sans-serif, bold;
+    margin-top: 120px;
+}
+
+.titleContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleContent h1{
+    font-size: 24em;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+.titleContent h3 {
+    font-size: 4em;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: bold;
+    margin-bottom: -50px;
+}
+
+.exploreContainer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.main
+{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
