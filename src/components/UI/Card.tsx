@@ -3,21 +3,22 @@ import { FaRegHeart  } from "@react-icons/all-files/fa/FaRegHeart";
 import { useRecoilState } from 'recoil'
 import { favouriteItemsState } from '../../states/atoms'
 import { AiOutlineDelete } from "@react-icons/all-files/ai/AiOutlineDelete";
+import { Rocket } from '../../Interfaces/Interfaces';
 
-const Card = (props:any) => {
+const Card = (props:{rocket:Rocket,img:string,type?:string}) => {
   const [favouriteItems, setFavouriteItems] = useRecoilState(favouriteItemsState)
   function addToFavourite()
   {
     if(favouriteItems.length===0)
     {
-      const rocket = {...props.rocket,img:props.img}
-      setFavouriteItems([rocket])
+      const tempRocket:Rocket = {...props.rocket, img:props.img}
+      setFavouriteItems([tempRocket])
       return
     }
     else 
     {
-      const rocket = {...props.rocket,img:props.img}
-      setFavouriteItems([...favouriteItems,rocket])
+      const tempRocket:Rocket = {...props.rocket,img:props.img}
+      setFavouriteItems([...favouriteItems,tempRocket])
     }
     console.log(favouriteItems)
     
@@ -25,7 +26,7 @@ const Card = (props:any) => {
 
   function deleteFromFavourite()
   {
-    const newFavouriteItems = favouriteItems.filter((rocket:any)=>rocket.id!==props.rocket.id)
+    const newFavouriteItems = favouriteItems.filter((rocket:Rocket)=>rocket.id!==props.rocket.id)
     setFavouriteItems(newFavouriteItems)
   }
   return (

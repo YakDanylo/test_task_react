@@ -5,10 +5,10 @@ import Header from '../components/Header';
 import {useRef} from 'react'
 
 const HomePage = () => {
-    const handleExploreRef = useRef(null)
+    const handleExploreRef = useRef<HTMLDivElement>(null)
     function handleExploreClick()
     {
-        (handleExploreRef.current as any).scrollIntoView({behavior: "smooth", block: "start"})
+        (handleExploreRef.current as HTMLDivElement).scrollIntoView({behavior: "smooth", block: "start"})
     }
     
   return (

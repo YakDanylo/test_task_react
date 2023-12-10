@@ -10,8 +10,8 @@ import picture2 from "../assets/images/pexels-mikhail-nilov-7672013 1.png"
 import classes from "../styles/CarouselItem.module.scss"
 import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
 import { IoIosArrowBack  } from "@react-icons/all-files/io/IoIosArrowBack";
-
-const pictures = [picture1,picture2,picture3,picture1,picture2,picture3]
+import { Rocket } from '../Interfaces/Interfaces';
+const pictures: string[] = [picture1,picture2,picture3,picture1,picture2,picture3]
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -24,18 +24,18 @@ const responsive = {
 }
 const CarouselItem = () => {
 
-  const {loading,error,data} = useQuery(GET_ROCKETS);
+  const {loading,data} = useQuery(GET_ROCKETS);
   const carouselRef = useRef<Carousel | null>(null);
 
   const handleNextClick = () => {
     if (carouselRef.current) {
-      (carouselRef.current as any).next();
+      (carouselRef.current as Carousel).next(1);
     }
   };
 
   const handlePrevClick = () => {
     if (carouselRef.current) {
-      (carouselRef.current as any).previous();
+      (carouselRef.current as Carousel).previous(1);
     }
   };
     return (
@@ -58,11 +58,10 @@ const CarouselItem = () => {
               >
                 {loading?<p>Loading...</p>
                 :
-                data?.rockets.map((rocket:any) => {
+                data?.rockets.map((rocket:Rocket) => {
                   return (
                     <Card rocket={rocket} img = {pictures[data.rockets.indexOf(rocket)]} key={rocket.id}/>
                   )
-
                 })
                 }
               </Carousel>
